@@ -8,24 +8,48 @@ document.addEventListener("DOMContentLoaded", function() {
   });
   var compositeSlider = new Swiper('.composite-slider.swiper-container', {
     navigation: {
-      nextEl: '.section-button-next',
-      prevEl: '.section-button-prev',
+      nextEl: '.composite .section-button-next',
+      prevEl: '.composite .section-button-prev',
     },
     slidesPerView: 1,
     spaceBetween: 10,
   });
   var monoSlider = new Swiper('.mono-slider.swiper-container', {
     navigation: {
-      nextEl: '.section-button-next',
-      prevEl: '.section-button-prev',
+      nextEl: '.mono .section-button-next',
+      prevEl: '.mono .section-button-prev',
+    },
+    slidesPerView: 1,
+    spaceBetween: 10,
+  });
+  var similarSlider = new Swiper('.similar-slider.swiper-container', {
+    navigation: {
+      nextEl: '.similar .section-button-next',
+      prevEl: '.similar .section-button-prev',
     },
     slidesPerView: 1,
     spaceBetween: 10,
   });
   var compositionsSlider = new Swiper('.compositions-slider.swiper-container', {
     navigation: {
-      nextEl: '.section-button-next',
-      prevEl: '.section-button-prev',
+      nextEl: '.compositions .section-button-next',
+      prevEl: '.compositions .section-button-prev',
+    },
+    slidesPerView: 1,
+    spaceBetween: 10,
+  });
+  var giftsSlider = new Swiper('.gifts-slider.swiper-container', {
+    navigation: {
+      nextEl: '.gifts .section-button-next',
+      prevEl: '.gifts .section-button-prev',
+    },
+    slidesPerView: 1,
+    spaceBetween: 10,
+  });
+  var interestedSlider = new Swiper('.interested-slider.swiper-container', {
+    navigation: {
+      nextEl: '.interested .section-button-next',
+      prevEl: '.interested .section-button-prev',
     },
     slidesPerView: 1,
     spaceBetween: 10,
@@ -219,5 +243,53 @@ document.addEventListener("DOMContentLoaded", function() {
       orientation: "bottom auto"
     });
   }
+
+  // Modal 
+  const popUp = () => {
+    const modalContent = document.querySelector('.modal__content');
+
+    const modalData = {
+      popupLink: document.querySelectorAll('[data-link-id]'),
+      modal: document.querySelectorAll('.modal'),
+      closeBtn(elem) {
+        const closeBtn = elem.querySelector('.modal-close');
+        closeBtn.addEventListener('click', () => {
+          this.closeModal(elem);
+        });
+        this.modal.forEach(elem => {
+          elem.addEventListener('click', (e) => {
+            if (e.target.classList.contains('modal__window')) {
+              this.closeModal(elem);
+            }
+          });
+        });
+
+      },
+      closeModal(elem) {
+        elem.classList.remove('modal-open');
+      },
+      openModal(attr) {
+        this.modal.forEach((elem) => {
+          const elemAttr = elem.getAttribute('data-modal-id');
+          if (attr === elemAttr) {
+            elem.classList.add('modal-open');
+            this.closeBtn(elem);
+          }
+        });
+      },
+    };
+
+    modalData.popupLink.forEach(elem => {
+      elem.addEventListener('click', (event) => {
+        event.preventDefault();
+        const target = event.target;
+        const attrLinkValue = target.getAttribute('data-link-id');
+        modalData.openModal(attrLinkValue);
+      });
+    });
+
+  };
+
+  popUp();
 
 });

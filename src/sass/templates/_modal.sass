@@ -1,0 +1,85 @@
+.modal
+    display: none
+    position: fixed
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    overflow: hidden
+    overflow-y: auto
+    -webkit-overflow-scrolling: touch
+    flex-flow: column nowrap
+    align-items: center
+    justify-content: flex-start
+    margin: auto
+    z-index: 109
+    opacity: 0
+    animation: animated 0.3s ease
+    &__window
+        padding: 30px 15px
+        flex-shrink: 0
+        flex-grow: 0
+        width: 100%
+        min-height: 100%
+        display: flex
+        flex-flow: column nowrap
+        align-items: center
+        justify-content: center
+        background: rgba(0,0,0,0.7)
+    &-overlay
+        position: absolute
+        z-index: 5
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(0,0,0,0.5)
+    &-close
+        position: absolute
+        top: 0
+        right: 0
+        width: 35px
+        height: 35px
+        background-color: $d-primary 
+        color: #ffffff
+        font-size: 17px
+        border: none
+        line-height: 1
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        transition: background-color 0.3s
+    &__title
+        margin-bottom: 30px
+        color: $txt
+        font-size: 18px
+        font-weight: 600
+        text-align: center
+        text-transform: uppercase
+    &__content
+        position: relative
+        padding: 50px 70px
+        background: #ffffff
+        border-radius: 0 0 30px 30px
+        max-width: 470px
+        color: #000000
+        border-top: 4px solid $d-primary
+    .checkbox
+        span
+            font-size: 12px
+
+.modal.modal-open
+    display: block
+    opacity: 1
+
+.hidden
+    overflow: hidden
+
+@keyframes animated
+    0% 
+        opacity: 0
+    100% 
+        opacity: 1

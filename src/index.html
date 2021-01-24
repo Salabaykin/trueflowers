@@ -45,7 +45,7 @@
                             </a>
                         </div>
                         <div class="header__exclusive">
-                            <button class="btn">Эксклюзивный букет</button>
+                            <button class="btn" data-link-id="exclusive-modal">Эксклюзивный букет</button>
                             <div class="header__delivery-time">
                                 Ежедневная доставка цветов с 07:00 до 23:00
                             </div>
@@ -175,6 +175,10 @@
                                             <input type="radio" name="size" id="checkbox-3" value="Max">
                                             <label for="checkbox-3"><span>Max</span>45 см</label>
                                         </div>
+                                        <div class="card__item">
+                                            <input type="radio" name="size" id="checkbox-30" value="Max">
+                                            <label for="checkbox-30"><span>Max</span>50 см</label>
+                                        </div>
                                     </div>
                                     <div class="card__basket">
                                         <button class="btn btn--dark card__btn">В корзину</button>
@@ -207,8 +211,7 @@
                                         </div>
                                     </div>
                                     <div class="card__basket">
-                                        <button class="btn btn--dark card__btn">В корзину</button>
-                                        <button class="btn btn--fill card__btn">Купить в 1 клик</button>
+                                        <button class="btn btn--fill card__btn btn-similar">Похожие букеты</button>
                                     </div>
                                 </div>
                             </div>
@@ -237,8 +240,7 @@
                                         </div>
                                     </div>
                                     <div class="card__basket">
-                                        <button class="btn btn--dark card__btn">В корзину</button>
-                                        <button class="btn btn--fill card__btn">Купить в 1 клик</button>
+                                        <button class="btn btn--fill card__btn btn-not-available" disabled>Нет в наличии</button>
                                     </div>
                                 </div>
                             </div>
@@ -384,6 +386,10 @@
                                         <div class="card__item">
                                             <input type="radio" name="quantity" id="quantity-checkbox-3" value="21">
                                             <label for="quantity-checkbox-3">21 шт.</label>
+                                        </div>
+                                        <div class="card__item">
+                                            <input type="radio" name="quantity" id="quantity-checkbox-30" value="31">
+                                            <label for="quantity-checkbox-30">31 шт.</label>
                                         </div>
                                     </div>
                                     <div class="card__basket">
@@ -761,6 +767,39 @@
             <!-- /.container -->
         </div>
     </footer>
+
+    <div class="modal" data-modal-id="exclusive-modal">
+        <div class="modal__window">
+    
+            <div class="modal__content">
+                <button class="modal-close">&#10006;</button>
+                
+                <div class="modal__title">Эксклюзивный букет</div>
+
+                <form action="#" class="modal-form">
+                    <div class="input">
+                        <label class="order-label" for="user-name">Имя*</label>
+                        <input class="order-input" type="text" name="user-name" id="user-name" required>
+                    </div>
+                    <div class="input">
+                        <label class="order-label" for="user-phone">Телефон*</label>
+                        <input class="order-input" type="tel" name="user-phone" id="user-phone" required>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="delivery-sms" id="delivery-sms" checked>
+                        <label for="delivery-sms">
+                            <span>Нажимая кнопку «Жду звонка!», Вы даете свое согласие на обработку персональных данных в соответствии с <a href="#" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a></span>
+                        </label>
+                    </div>
+                    <button class="btn btn--fill btn-modal">Жду звонка!</button>
+                </form>
+                
+            </div>
+            <!-- /.modal__content -->
+    
+        </div>
+    </div>
+    <!-- /.modal -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
