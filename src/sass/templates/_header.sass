@@ -1,0 +1,53 @@
+.header
+    position: relative
+    z-index: 100
+    &__wrap
+        margin-top: 24px
+        margin-bottom: 15px
+        display: flex
+        .logo 
+            width: 150px
+            height: 114px
+    &-right
+        margin-left: 110px
+        width: 100%
+        &-top
+            margin-top: -5px
+            display: flex
+            justify-content: flex-end
+        &-bottom
+            margin-top: 17px
+            display: flex
+            justify-content: flex-end
+    &__inst
+        display: flex
+        margin-right: 70px
+        padding-top: 10px
+        img 
+            display: block
+            width: 28px
+            height: 29px
+    &__exclusive
+        margin-right: 25px
+    &__delivery-time
+        margin-top: 12px
+        color: #000000
+        font-size: 14px
+
+.call-me
+    margin-right: 70px
+    &__tel
+        display: block
+        color: #000000
+        font-size: 20px
+        font-weight: 600
+        line-height: 1.1
+    &__btn 
+        margin-top: 17px
+        padding: 0
+        background-color: transparent 
+        border: none
+        border-bottom: 1px dotted $d-primary
+        color: $d-primary
+        font-size: 16px
+        cursor: pointer

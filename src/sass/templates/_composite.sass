@@ -1,0 +1,27 @@
+.composite
+    position: relative
+    padding: 70px 0 60px 0
+    background-color: $secondary
+    background-image: url('../images/composite-bg.svg')
+    background-repeat: no-repeat
+    background-size: 60%
+    background-position: 100% 60%
+    &::after
+        content: ''
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: 0
+        width: 299px
+        height: 344px
+        background: url('../images/composite-bg-left.svg')
+        background-repeat: no-repeat
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        width: 51px
+        height: 26px
+        background: url('../images/icons/section-icon-white.svg')

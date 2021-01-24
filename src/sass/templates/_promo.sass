@@ -1,0 +1,66 @@
+.promo
+    background: $d-primary
+    &__container
+        margin: auto
+        max-width: 1530px
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            z-index: 10
+            bottom: -60px
+            left: 220px
+            width: 215px
+            height: 118px
+            background: url('../images/flower.png')
+            background-repeat: no-repeat
+        .swiper-button-next:after, 
+        .swiper-button-prev:after
+            display: none
+        .swiper-button-next, 
+        .swiper-button-prev
+            width: 73px
+            height: 73px
+            border: 2px solid #f2f7f9
+            border-radius: 50%
+            outline: none
+            user-select: none
+            -webkit-user-select: none
+            -moz-user-select: none
+            -ms-user-select: none
+        .swiper-button-next
+            right: -36px
+        .swiper-button-prev
+            left: -36px
+    &-item
+        padding-top: 133px 
+        padding-bottom: 120px
+        &-container
+            max-width: 1170px
+        &__title 
+            max-width: 550px
+            color: #ffffff
+            font-family: 'Oranienbaum'
+            font-size: 48px
+            text-transform: uppercase
+            line-height: 60px
+        &__descr
+            max-width: 550px
+            margin-top: 23px
+            color: #ffffff
+            font-size: 18px
+            line-height: 20px
+        &__btn
+            margin-top: 85px
+    &-descr
+        display: flex
+        justify-content: center
+        padding: 38px
+        background: #ffffff
+        h1 
+            font-size: 36px
+            font-weight: 300
+    &-slider
+        &__btn
+            padding-left: 80px
+            padding-right: 80px
