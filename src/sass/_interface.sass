@@ -190,6 +190,48 @@
     background-repeat: no-repeat
     background-size: cover
 
+.v-sale, 
+.v-new
+    position: relative
+    min-width: 53px
+    height: 56px
+    display: flex
+    align-items: center
+    padding-top: 3px
+    span 
+        position: relative
+        z-index: 5
+        color: #ffffff
+        margin: auto
+        font-size: 18px
+        text-align: center
+        font-weight: 500
+        text-transform: uppercase
+    &::before
+        content: ''
+        position: absolute
+        z-index: 3
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+
+.v-sale
+    margin-right: 10px
+    &::before
+        background: url('../images/icons/v-sale-bg.svg')
+        background-position-y: bottom 
+        background-repeat: no-repeat
+        background-size: cover 
+.v-new
+    span 
+        font-size: 16px
+    &::before
+        background: url('../images/icons/v-new-bg.svg')
+        background-position-y: bottom 
+        background-repeat: no-repeat
+        background-size: cover 
+
 .contacts-bg,
 .categories-bg
     &::before

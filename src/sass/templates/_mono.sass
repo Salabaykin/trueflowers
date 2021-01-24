@@ -27,3 +27,20 @@
     &-slider
         margin-top: 54px
         margin-bottom: 40px
+    .swiper-button-next, 
+    .swiper-button-prev
+        border: 2px solid #ffffff
+        background-color: $primary
+    .swiper-button-next
+        &::before
+            background: url('../images/icons/arrow-slider-right.svg')
+            background-repeat: no-repeat
+            width: 10px
+            height: 18px
+    .swiper-button-prev
+        &::before
+            transform: translate(-50%, -50%) rotate(180deg)
+            background: url('../images/icons/arrow-slider-right.svg')
+            background-repeat: no-repeat
+            width: 10px
+            height: 18px
