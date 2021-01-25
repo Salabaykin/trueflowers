@@ -37,6 +37,7 @@
         padding-bottom: 120px
         &-container
             max-width: 1170px
+            padding: 0 110px
         &__title 
             max-width: 550px
             color: #ffffff
@@ -64,3 +65,45 @@
         &__btn
             padding-left: 80px
             padding-right: 80px
+
+
+@media screen and ( max-width: 1600px )
+    .promo
+        &__container
+            .swiper-button-next
+                right: 15px
+            .swiper-button-prev
+                left: 15px
+
+@media screen and ( max-width: 1260px )
+    .promo
+        &__container
+            .swiper-button-next, 
+            .swiper-button-prev
+                width: 50px
+                height: 50px
+                img 
+                    width: 15px
+                    height: 15px
+        &-item
+            &-container
+                padding: 0 90px
+
+@media screen and ( max-width: 1100px )
+    .promo
+        &__container
+            .swiper-button-next,
+            .swiper-button-prev
+                top: 60px
+            .swiper-button-next
+                left: 100px
+            .swiper-button-prev
+                left: 30px
+        &-item
+            background-position: left !important
+            padding-top: 120px
+            padding-bottom: 90px
+            &-container
+                padding: 0 30px
+            &__btn 
+                margin-top: 40px

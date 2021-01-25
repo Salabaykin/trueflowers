@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
       nextEl: '.promo-nav-arrow-next.swiper-button-next',
       prevEl: '.promo-nav-arrow-prev.swiper-button-prev',
     },
+    autoHeight: true,
   });
   var compositeSlider = new Swiper('.composite-slider.swiper-container', {
     navigation: {
@@ -291,5 +292,17 @@ document.addEventListener("DOMContentLoaded", function() {
   };
 
   popUp();
+
+  // Menu 
+  const burgerMenu = document.querySelector('.burger-menu'), 
+        menuClose = document.querySelector('.main-nav__close'),
+        menu = document.querySelector('.main-nav__list');
+
+  burgerMenu.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+  menuClose.addEventListener('click', () => {
+    menu.classList.remove('show');
+  });
 
 });

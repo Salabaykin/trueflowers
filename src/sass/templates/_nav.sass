@@ -12,9 +12,34 @@
                 line-height: 20px
                 &:hover
                     color: #000000
+                
+.burger-menu
+    display: none
+    &__icon
+        width: 40px
+        fill: $primary
+        cursor: pointer
+        transition: fill 0.2s
+        &:hover
+            fill: darken($primary, 20%)
 
 .main-nav
+    &-sec
+        display: none
+    &__menu,
+    &__close
+        display: none
+        &-icon
+            width: 20px
+            fill: $primary
+            cursor: pointer
+            transition: fill 0.2s
+            &:hover
+                fill: darken($primary, 20%)
+    &__menu-block
+        display: none
     &__list
+        position: relative
         display: flex
         justify-content: space-between
         border-top: 3px solid $primary
@@ -74,6 +99,7 @@
                 right: 30px
                 background: url('../images/dropdown-bg.png')
                 background-repeat: no-repeat
+                background-size: cover 
                 width: 179px
                 height: 104px
             &::before
@@ -85,5 +111,114 @@
                 width: 1px
                 height: 95px
 
+.main-nav__list.show 
+    display: flex
+
 .main-nav__list li.active 
     background-color: $primary
+
+
+@media screen and ( max-width: 1250px )
+    .main-nav
+        &__list li a 
+            font-size: 13px
+        &__dropdown
+            top: 53px
+            height: 185px
+            &-f
+                &::after
+                    width: calc( 179px * 0.8 )
+                    height: calc( 104px * 0.8 )
+
+@media screen and ( max-width: 1050px )
+    .burger-menu
+        display: flex 
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 30px
+    .main-nav
+        &__menu 
+            display: block
+            margin: 30px
+            margin-left: 20px
+            font-weight: 600
+            &-block
+                display: block
+                padding: 20px
+                .btn 
+                    width: 100%
+        &__close
+            display: block 
+            position: absolute
+            top: 30px
+            right: 30px
+        &-sec
+            display: block
+        &__list
+            display: none
+            position: fixed
+            top: 0
+            left: 0
+            width: 330px
+            height: 100%
+            overflow-y: auto
+            background-color: #ffffff
+            border-top: 6px solid $primary
+            box-shadow: 0px 0px 10px 15px rgba(0,0,0,0.15)
+            z-index: 300
+            flex-direction: column
+            justify-content: flex-start
+            li 
+                a 
+                &:hover
+                    .main-nav__dropdown, 
+                    .main-nav__dropdown-f
+                        display: none 
+    .header-right-top
+        display: none
+    .header-right-bottom 
+        margin-top: 0
+        display: flex
+        align-items: center
+    .header-right 
+        display: flex
+        justify-content: flex-end
+    .header__inst
+        padding-top: 0
+
+@media screen and ( max-width: 768px )
+    .header-right-bottom
+        .call-me 
+            display: none
+    .header__wrap
+        padding: 0
+    .header__wrap .logo 
+        height: 90px
+    .burger-menu
+        right: 15px
+
+@media screen and ( max-width: 576px )
+    .main-nav
+        &__list
+            width: 100%
+    .header__wrap 
+        margin-right: 70px
+    .header__wrap .logo 
+        width: 130px
+    .btn-basket
+        display: none
+        &-mobile
+            width: 50px
+            height: 50px
+            display: flex
+            justify-content: center
+            align-items: center
+    .header__inst
+        margin-right: 15px
+        a 
+            width: 50px
+            height: 50px
+            display: flex
+            justify-content: center
+            align-items: center

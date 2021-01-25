@@ -11,6 +11,8 @@
     text-align: center
     cursor: pointer
     transition: all 0.2s
+    @media screen and ( max-width: 1150px )
+        padding: 10px 34px
     &--fill
         background-color: $d-primary
         border: 2px solid $d-primary
@@ -45,6 +47,8 @@
 .btn-basket
     position: relative
     padding-left: 75px
+    &-mobile
+        display: none
     &::before
         content: ''
         position: absolute
