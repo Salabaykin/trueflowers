@@ -61,6 +61,7 @@
         h1 
             font-size: 36px
             font-weight: 300
+            text-align: center
     &-slider
         &__btn
             padding-left: 80px
@@ -113,3 +114,10 @@
         padding: 25px
         h1 
             font-size: 22px
+
+@media screen and (max-width: 768px)
+    .promo-item 
+        background-position: 40% 80% !important
+    .promo__container
+        &::after
+            display: none

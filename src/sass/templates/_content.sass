@@ -24,6 +24,7 @@
         letter-spacing: 1.75px
     &-price
         display: flex
+        flex-wrap: wrap 
         align-items: center
         margin-bottom: 25px
         &__new 
@@ -46,7 +47,7 @@
             margin-right: 30px
     &-size
         margin-top: 20px
-        margin-bottom: 30px
+        margin-bottom: 20px
         &__title
             margin-bottom: 10px
             color: #000101
@@ -55,9 +56,11 @@
             line-height: 24px
         &__wrap
             display: flex
+            flex-wrap: wrap 
             align-items: center
         &__item
             margin-right: 10px
+            margin-bottom: 5px
             display: flex
             &:last-child
                 margin-right: 0
@@ -84,10 +87,12 @@
                 opacity: 0
     &-basket
         display: flex
+        flex-wrap: wrap 
         justify-content: space-between
-        padding-bottom: 30px
+        padding-bottom: 25px
         border-bottom: 1px solid #d8e5ea
         &__btn
+            margin: 5px 0
             padding: 13px 30px
             padding-left: 55px
             margin-right: 10px
@@ -100,7 +105,8 @@
                 height: 22px
                 background-size: cover 
             &--buy
-                padding: 5px 29px
+                margin: 5px 0
+                padding: 13px 30px
                 font-size: 14px
                 font-weight: 600
                 text-transform: uppercase
@@ -122,6 +128,10 @@
     &-descr
         display: flex
         align-items: flex-start
+        &__left-wrap
+            width: 50%
+            display: flex
+            padding-right: 30px
         &__composition, 
         &__color, 
         &__text
@@ -131,6 +141,7 @@
             border-radius: 30px
         &__composition
             background: $d-primary
+            margin-right: 30px
             .content-descr__item
                 label
                     border: 1px solid #acc9d4
@@ -143,8 +154,7 @@
                     color: #000000
         &__composition, 
         &__color, 
-            margin-right: 30px
-            width: 24%
+            width: 50%
         &__text
             width: 50%
         &__title
@@ -290,3 +300,77 @@
                 background-size: cover 
 
                         
+@media screen and ( max-width: 1250px )
+    .content__title
+        font-size: 27px
+    .content-basket__btn,
+    .content-basket__btn--buy
+        font-size: 12px
+    .content-size__item label
+        padding: 10px
+    .content-amount .amount 
+        width: 120px
+        height: 40px
+    .content .h-sale 
+        padding: 10px 20px 10px 15px
+
+@media screen and ( max-width: 1024px )
+    .content-price__new
+        font-size: 20px
+    .content-price__old 
+        font-size: 14px
+    .content-descr
+        flex-direction: column-reverse
+    .content-descr__text,
+    .content-descr__left-wrap
+        width: 100%
+        padding-right: 0
+    .content-descr__left-wrap
+        margin-top: 30px
+
+@media screen and ( max-width: 991px )
+    .content 
+        flex-direction: column
+    .content-left, .content-right
+        width: 100%
+    .photo-slider__item 
+        height: 500px
+        border-radius: 30px 30px 0 0
+    .content-right
+        border-radius: 0 0 30px 30px
+    .content-basket 
+        justify-content: flex-start
+
+@media screen and ( max-width: 768px )
+    .content-descr__left-wrap
+        flex-wrap: wrap 
+    .content-descr__composition, .content-descr__color 
+        width: 100%
+    .content-descr__composition
+        margin-right: 0
+        margin-bottom: 30px
+    .content-right
+        padding: 30px
+    .content__wrap 
+        padding-top: 30px
+        padding-bottom: 30px
+    .content-descr__title 
+        font-size: 14px
+
+@media screen and ( max-width: 500px )
+    .photo-slider__item 
+        height: 430px
+
+@media screen and ( max-width: 420px )
+    .content .h-sale
+        display: none
+    .content__title
+        margin-bottom: 30px
+    .content-right
+        padding: 15px
+    .content-descr__composition, .content-descr__color, .content-descr__text
+        padding: 25px 15px
+
+@media screen and ( max-width: 400px )
+    .photo-slider__item
+        height: 360px
