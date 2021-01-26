@@ -122,10 +122,14 @@
         margin-bottom: 0
     &__addr
         display: flex
+        flex-wrap: wrap 
         margin-top: 19px
+    &__delivery-str 
+        margin-right: 50px
+        margin-bottom: 15px
     &__delivery-add
-        margin-left: 50px
         display: flex
+        flex-wrap: wrap 
         .input 
             margin-right: 30px
             margin-bottom: 0
@@ -188,19 +192,22 @@
         
 .order-delivery-time
     display: flex
+    flex-wrap: wrap 
     &__left 
         width: 330px
-    &__right
-        margin-left: 50px
+        margin-right: 50px
+        margin-bottom: 15px
     &__radio
         margin-bottom: 10px
     &__input
         display: flex
+        flex-wrap: wrap
     &__amount
         display: flex
         align-items: center
-        &:nth-child(2)
-            margin-left: 30px
+        margin-bottom: 15px
+        &:nth-child(1)
+            margin-right: 30px
 
 .services
     margin-bottom: 50px
@@ -239,6 +246,7 @@
     background-color: #ffffff
     &__head
         display: flex
+        flex-wrap: wrap
         align-items: center
         justify-content: space-between
         padding-bottom: 25px
@@ -261,6 +269,7 @@
     &__item
         margin-bottom: 20px
         display: flex
+        flex-wrap: wrap
         align-items: center
         &:last-child
             margin-bottom: 0
@@ -336,6 +345,7 @@
     &-receipt
         margin-bottom: 40px
         display: flex
+        flex-wrap: wrap
     &__radio
         &:nth-child(1)
             margin-right: 110px
@@ -390,3 +400,99 @@
         .work-time
             font-weight: 500
 
+
+@media screen and ( max-width: 1050px )
+    .order-details
+        flex-wrap: wrap 
+    .order-details-left, .order-details-right
+        width: 100%
+    .order-details-left
+        margin-right: 0
+    .pickup
+        &__wrap
+            flex-direction: column
+    .pickup__radio
+        padding-left: 0
+        &:first-child
+            padding-right: 0
+            padding-left: 0
+            border-right: none 
+        &:nth-child(2)
+            margin-top: 30px
+    .pickup__addr,
+    .pickup__tel 
+        margin-bottom: 15px
+
+@media screen and ( max-width: 1024px )
+    .order__back a 
+        padding-left: 40px
+        font-size: 13px
+    .order__back a::before 
+        width: 30px
+        height: 30px
+
+@media screen and ( max-width: 768px )
+    .order__wrap 
+        padding-bottom: 40px
+
+@media screen and ( max-width: 710px )
+    .order-details-left, .order-details-right 
+        margin-bottom: 30px
+        padding: 60px 30px 30px 30px
+    .order-details__title,
+    .order-delivery__title,
+    .services__title,
+    .total-cost__title,
+    .comment__title,
+    .payment__title,
+    .order-tabs__link,
+    .territory__title,
+    .date__title,
+    .pickup__addr,
+    .pickup__tel,
+    .pickup__time
+        font-size: 15px
+    .pickup__tel span,
+    .pickup__time span
+        font-size: 15px
+    .pickup__radio label
+        padding-left: 40px !important
+    .order-tabs__content.active,
+    .total-cost
+        padding: 30px
+    .total-cost__price
+        font-weight: 600
+        margin: 10px 0
+    .order-tabs__link 
+        padding: 20px
+    .territory__select,
+    .territory__street,
+    .territory__delivery-str,
+    .date-input,
+    .order-delivery-time__left
+        width: 100%
+    .territory__delivery-str,
+    .order-delivery-time__left
+        margin-right: 0
+    .services
+        margin-bottom: 30px
+    .comment__message
+        padding-left: 0
+    .payment-btn
+        width: 100%
+
+@media screen and ( max-width: 570px )
+    .order__head
+        padding-bottom: 50px
+    .order__back 
+        top: 70%
+        left: 0
+        right: auto
+
+@media screen and ( max-width: 480px )
+    .order-details-left, .order-details-right 
+        padding: 50px 15px 15px 15px
+    .order-tabs__content.active
+        padding: 15px
+
+    
