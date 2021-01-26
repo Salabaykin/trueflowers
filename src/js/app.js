@@ -14,7 +14,20 @@ document.addEventListener("DOMContentLoaded", function() {
     },
     slidesPerView: 3,
     watchSlidesVisibility: true,
-    //spaceBetween: 30,
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+      },
+      // when window width is >= 720px
+      720: {
+        slidesPerView: 2,
+      },
+      // when window width is >= 991px
+      991: {
+        slidesPerView: 3,
+      }
+    }
   });
   var monoSlider = new Swiper('.mono-slider.swiper-container', {
     navigation: {
@@ -23,7 +36,20 @@ document.addEventListener("DOMContentLoaded", function() {
     },
     slidesPerView: 3,
     watchSlidesVisibility: true,
-    //spaceBetween: 30,
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+      },
+      // when window width is >= 720px
+      720: {
+        slidesPerView: 2,
+      },
+      // when window width is >= 991px
+      991: {
+        slidesPerView: 3,
+      }
+    }
   });
   var similarSlider = new Swiper('.similar-slider.swiper-container', {
     navigation: {
@@ -32,7 +58,20 @@ document.addEventListener("DOMContentLoaded", function() {
     },
     slidesPerView: 3,
     watchSlidesVisibility: true,
-    //spaceBetween: 30,
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+      },
+      // when window width is >= 720px
+      720: {
+        slidesPerView: 2,
+      },
+      // when window width is >= 991px
+      991: {
+        slidesPerView: 3,
+      }
+    }
   });
   var compositionsSlider = new Swiper('.compositions-slider.swiper-container', {
     navigation: {
@@ -41,7 +80,20 @@ document.addEventListener("DOMContentLoaded", function() {
     },
     slidesPerView: 3,
     watchSlidesVisibility: true,
-    //spaceBetween: 30,
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+      },
+      // when window width is >= 720px
+      720: {
+        slidesPerView: 2,
+      },
+      // when window width is >= 991px
+      991: {
+        slidesPerView: 3,
+      }
+    }
   });
   var giftsSlider = new Swiper('.gifts-slider.swiper-container', {
     navigation: {
@@ -50,7 +102,20 @@ document.addEventListener("DOMContentLoaded", function() {
     },
     slidesPerView: 3,
     watchSlidesVisibility: true,
-    //spaceBetween: 30,
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+      },
+      // when window width is >= 720px
+      720: {
+        slidesPerView: 2,
+      },
+      // when window width is >= 991px
+      991: {
+        slidesPerView: 3,
+      }
+    }
   });
   var interestedSlider = new Swiper('.interested-slider.swiper-container', {
     navigation: {
@@ -59,7 +124,20 @@ document.addEventListener("DOMContentLoaded", function() {
     },
     slidesPerView: 3,
     watchSlidesVisibility: true,
-    //spaceBetween: 30,
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+      },
+      // when window width is >= 720px
+      720: {
+        slidesPerView: 2,
+      },
+      // when window width is >= 991px
+      991: {
+        slidesPerView: 3,
+      }
+    }
   });
 
   const card = document.querySelectorAll('.swiper-container .card');
