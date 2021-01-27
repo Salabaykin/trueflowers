@@ -3,6 +3,7 @@
     align-items: flex-start
     padding-bottom: 90px
     &__list
+        position: relative
         width: 74%
         margin-right: 30px
         box-shadow: 0 0 32px rgba(3, 22, 29, 0.08)
@@ -68,13 +69,14 @@
     &-price
         margin-left: 55px
         display: flex
+        flex-wrap: wrap
         align-items: center
         &__new
             color: $txt
             font-size: 22px
             font-weight: 600
+            margin-right: 40px
         &__old
-            margin-left: 40px
             color: $txt
             font-size: 18px
             font-weight: 400
@@ -123,3 +125,66 @@
         &__btn
             width: 100%
 
+
+@media screen and ( max-width: 1100px )
+    .basket
+        flex-direction: column
+    .basket__list,
+    .basket-total
+        width: 100%
+    .basket-total
+        margin-top: 30px
+
+@media screen and ( max-width: 768px )
+    .basket
+        padding-bottom: 40px
+    .basket-item 
+        padding: 20px 30px
+        padding-right: 55px
+    .basket-sale
+        display: none
+    .basket-delete 
+        top: 15px
+        right: 15px
+        width: 24px
+        height: 24px
+        font-size: 14px
+    .basket__title 
+        margin-bottom: 15px
+        font-size: 15px
+    .basket-price 
+        margin-left: 0
+    .basket-price__new 
+        font-size: 16px
+        margin-right: 15px
+    .basket__amount .amount 
+        width: 130px
+        height: 40px
+    .basket__img
+        width: 80px
+        height: 80px
+    .basket-total__head, 
+    .basket-total__bottom
+        padding: 15px
+    .basket-total__sum
+        font-size: 14px
+    .basket-total__sum span 
+        margin-left: 10px
+        font-size: 20px
+    .basket__body
+        flex-wrap: wrap
+    .basket__amount
+        margin-right: 25px
+        margin-bottom: 10px
+
+@media screen and ( max-width: 576px )
+    .basket-item 
+        padding: 15px
+        padding-right: 45px
+    .basket__left 
+        margin-right: 15px
+
+@media screen and ( max-width: 410px )
+    .basket__img
+        width: 60px
+        height: 60px
