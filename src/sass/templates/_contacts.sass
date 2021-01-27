@@ -145,3 +145,74 @@
     height: 500px
     overflow: hidden
     border-radius: 8px
+
+@media screen and ( max-width: 1180px )
+    .contacts-right
+        display: none
+    .contacts-left
+        width: 100%
+    .contacts-address
+        &:last-child
+            .contacts-address__wrap
+                margin-right: 0
+    .contacts-soc__wrap
+        margin-right: 0
+
+@media screen and ( max-width: 768px )
+    .contacts-map,
+    .contacts__wrap
+        padding-bottom: 40px
+    .contacts-top,
+    .contacts-bottom
+        flex-direction: column
+    .contacts-address,
+    .contacts-email, 
+    .contacts-soc
+        width: 100%
+    .contacts-soc
+        margin-top: 30px
+    .contacts-address__wrap,
+    .contacts-email__wrap
+        margin-right: 0
+    .contacts-address__wrap 
+        padding: 20px 15px
+    .contacts-email__wrap, 
+    .contacts-soc__wrap 
+        padding: 20px 30px
+    .contacts-email__wrap
+        padding-left: 90px
+    .contacts-email__wrap::before 
+        left: 20px
+    .contacts-address__title 
+        margin-bottom: 5px
+        font-size: 14px
+    .contacts-address__item 
+        margin-bottom: 15px
+    .contacts-email__title
+        font-size: 14px 
+        margin-bottom: 5px
+    #map 
+        height: 350px
+    .contacts-soc__title 
+        margin-right: 10px
+        font-size: 14px
+    .contacts-soc__block 
+        width: 50px
+        height: 50px
+    .contacts-address__block,
+    .contacts-email__block
+        font-size: 14px
+
+@media screen and ( max-width: 400px )
+    .contacts-address__item .num 
+        padding-top: 9px
+        width: 36px
+        height: 43px
+    .contacts-address__item 
+        padding-left: 50px
+    .contacts-email__wrap::before 
+        left: 20px
+        width: 35px
+        height: 24px
+    .contacts-email__wrap 
+        padding-left: 70px
