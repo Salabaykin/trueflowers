@@ -150,7 +150,7 @@
 
                     <div class="feedback-list">
 
-                        <button class="btn btn--fill feedback-list__btn">Оставить отзыв</button>
+                        <button class="btn btn--fill feedback-list__btn" data-link-id="feedback-modal">Оставить отзыв</button>
 
                         <div class="feedback-item">
                             <div class="feedback-item__content">
@@ -219,7 +219,7 @@
 
                         <div class="feedback-write">
                             <div class="feedback-write__icon"></div>
-                            <button class="btn btn--white feedback-write__btn">Оставить отзыв</button>
+                            <button class="btn btn--white feedback-write__btn" data-link-id="feedback-modal">Оставить отзыв</button>
                         </div>
                         <!-- /.feedback-write -->
 
@@ -306,6 +306,42 @@
             <!-- /.container -->
         </div>
     </footer>
+
+    <div class="modal" data-modal-id="feedback-modal">
+        <div class="modal__window">
+    
+            <div class="modal__content">
+                <button class="modal-close">&#10006;</button>
+                
+                <div class="modal__title">Отзыв</div>
+
+                <form action="#" class="modal-form">
+                    <div class="input">
+                        <label class="order-label" for="user-name">Имя*</label>
+                        <input class="order-input" type="text" name="user-name" id="user-name" required>
+                    </div>
+                    <div class="input">
+                        <label class="order-label" for="user-phone">Телефон*</label>
+                        <input class="order-input" type="tel" name="user-phone" id="user-phone" required>
+                    </div>
+                    <div class="user-message">
+                        <textarea name="message" placeholder="Ваше сообщение..."></textarea>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="delivery-sms" id="delivery-sms" checked>
+                        <label for="delivery-sms">
+                            <span>Нажимая кнопку «Жду звонка!», Вы даете свое согласие на обработку персональных данных в соответствии с <a href="#" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a></span>
+                        </label>
+                    </div>
+                    <button class="btn btn--fill btn-modal">Оставить отзыв</button>
+                </form>
+                
+            </div>
+            <!-- /.modal__content -->
+    
+        </div>
+    </div>
+    <!-- /.modal -->
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=f2d78244-7ca1-4693-90c4-cb2094456486" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
