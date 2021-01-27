@@ -5,6 +5,9 @@
     &-list
         width: 77% 
         padding-right: 30px
+        position: relative
+        &__btn
+            display: none
     &-right
         width: 23%
     &-item
@@ -24,6 +27,7 @@
                 line-height: 1.333
         &__descr
             display: flex
+            flex-wrap: wrap
             align-items: center
             padding: 15px 0
             border-top: 1px solid #d8e5ea
@@ -40,12 +44,12 @@
                 left: 0
                 height: 21px
         &__name
+            margin-right: 40px
             &::before
                 width: 19px
                 background: url('../images/icons/user.png')
                 background-size: cover 
         &__date
-            margin-left: 40px
             &::before
                 width: 22px
                 background: url('../images/icons/date.png')
@@ -90,4 +94,42 @@
             border: 2px solid #acc9d4
             
 
+@media screen and ( max-width: 1250px )
+    .feedback-write::after 
+        width: 199px
+        height: 163px
+@media screen and ( max-width: 1024px )
+    .feedback__wrap
+        flex-direction: column
+    .feedback-list
+        width: 100%
+    .feedback-right
+        display: none
+    .feedback-list
+        padding-right: 0
+    .feedback-list__btn
+        display: block
+        margin: auto
+        margin-bottom: 30px
 
+@media screen and ( max-width: 768px )
+    .feedback-item 
+        padding: 20px 20px 0 20px
+        border-radius: 20px
+    .feedback-item__content
+        margin-bottom: 15px
+    .feedback-item__content p 
+        font-size: 14px
+    .feedback-item__name,
+    .feedback-item__date
+        font-size: 14px
+    .feedback 
+        padding-bottom: 40px
+
+@media screen and ( max-width: 576px )
+    .feedback-list__btn
+        width: 100%
+
+@media screen and ( max-width: 370px )
+    .feedback-item__name
+        margin-bottom: 10px
