@@ -61,7 +61,7 @@
         text-transform: uppercase
     &__content
         position: relative
-        padding: 50px 70px
+        padding: 50px
         background: #ffffff
         border-radius: 0 0 30px 30px
         max-width: 470px
@@ -70,6 +70,22 @@
     .checkbox
         span
             font-size: 12px
+    &-card
+        box-shadow: none 
+        border-radius: 0
+        &__btn
+            font-size: 11px
+            padding: 12px 18px
+            margin: 5px 0
+            text-transform: uppercase
+            &:first-child
+                margin-right: 20px
+        &-bottom
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            padding-top: 25px
+            border-top: 1px solid #d8e5ea
 
 .modal.modal-open
     display: block
@@ -83,3 +99,17 @@
         opacity: 0
     100% 
         opacity: 1
+
+
+@media screen and ( max-width: 540px )
+    .modal__content
+        max-width: 100%
+        width: 100%
+        padding: 30px
+    .modal__title 
+        margin-bottom: 20px
+        font-size: 14px
+
+@media screen and ( max-width: 410px )
+    .modal-card-bottom
+        
